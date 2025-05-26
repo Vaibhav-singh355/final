@@ -1,59 +1,74 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { useRef ,useEffect, useState ,React} from "react"
-import { Facebook, Instagram, Twitter, ArrowRight,QuoteIcon } from "lucide-react"
-import { motion, useInView  } from "framer-motion"
-import {cn} from "@/lib/utils"
+import { useRef, useEffect, useState } from "react"
+import { Facebook, Instagram, Twitter, ArrowRight, QuoteIcon } from "lucide-react"
+import { motion, useInView } from "framer-motion"
+import { cn } from "@/lib/utils"
 
 export default function Home() {
-  const featuredRef = useRef(null);
+  const featuredRef = useRef(null)
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const handleScrollToFeatured = () => {
-    featuredRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+    featuredRef.current?.scrollIntoView({ behavior: "smooth" })
+    setMobileNavOpen(false)
+  }
   const abt = () => {
     window.scrollTo({
       top: document.getElementById("about").offsetTop,
       behavior: "smooth",
-
-    });
-
+    })
+    setMobileNavOpen(false)
   }
   const service = () => {
     window.scrollTo({
       top: document.getElementById("service").offsetTop,
       behavior: "smooth",
-
-    });
-
+    })
+    setMobileNavOpen(false)
+  }
+  const cont = () => {
+    window.scrollTo({
+      top: document.getElementById("contact").offsetTop,
+      behavior: "smooth",
+    })
+    setMobileNavOpen(false)
   }
   const blog = () => {
     window.scrollTo({
       top: document.getElementById("blog").offsetTop,
       behavior: "smooth",
-
-    });
-
+    })
+    setMobileNavOpen(false)
   }
-
   const recepi = () => {
     window.scrollTo({
       top: document.getElementById("rep").offsetTop,
       behavior: "smooth",
-
-    });
-
+    })
+    setMobileNavOpen(false)
   }
+  useEffect(() => {
+    if (mobileNavOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [mobileNavOpen])
 
 
 
   return (
-    <div className="flex min-h-screen flex-col overflow-hidden bg-black-950 text-amber-50">
+   <div className="flex min-h-screen flex-col overflow-hidden bg-black-950 text-amber-50">
       <BackgroundDecoration />
 
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center relative z-10">
-        <div className="w-64 transition-transform duration-300 hover:scale-105">
+      {/* Header */}
+      <header className="container mx-auto px-4 md:px-6 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
+        <div className="w-40 md:w-64 transition-transform duration-300 hover:scale-105 flex-shrink-0">
           <Link href="/">
             <Image
               src="/logo.jpg?height=100&width=260"
@@ -65,34 +80,31 @@ export default function Home() {
             />
           </Link>
         </div>
-        <nav className="hidden md:flex space-x-8">
-          <button onClick={abt} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-4 lg:space-x-8">
+          <button onClick={abt} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             About
           </button>
-          <button onClick={service} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+          <button onClick={service} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             Featured Services
           </button>
-
-          <button onClick={blog} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+          <button onClick={blog} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             Blog
           </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             E-book
-
           </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             Recent research
-
           </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             Nutrition Plans
-
           </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-lg font-medium tracking-wide relative group py-2 block">
+          <button onClick={cont} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
             Contact
-
           </button>
         </nav>
+        {/* Desktop Social */}
         <div className="hidden md:flex items-center space-x-4">
           <Link href="#" aria-label="Facebook" className="social-icon-link">
             <Facebook className="h-8 w-10 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
@@ -101,56 +113,111 @@ export default function Home() {
             <Instagram className="h-8 w-10 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
           </Link>
         </div>
+        {/* Mobile Hamburger */}
+        <div className="flex md:hidden w-full justify-end">
+          <button
+            className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#bfa14a]"
+            onClick={() => setMobileNavOpen((v) => !v)}
+            aria-label="Open navigation"
+          >
+            <svg width="32" height="32" fill="none" stroke="#bfa14a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="6" y1="10" x2="26" y2="10" />
+              <line x1="6" y1="16" x2="26" y2="16" />
+              <line x1="6" y1="22" x2="26" y2="22" />
+            </svg>
+          </button>
+        </div>
+        {/* Mobile Nav Drawer */}
+        {mobileNavOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center md:hidden transition-all">
+            {/* Backdrop */}
+            <div
+              className="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm transition-opacity"
+              onClick={() => setMobileNavOpen(false)}
+              aria-label="Close navigation"
+            />
+            {/* Drawer */}
+            <div className="relative bg-black-950 rounded-xl shadow-2xl w-11/12 max-w-sm mx-auto p-2 flex flex-col items-center animate-fade-in-up z-10">
+              <button
+                className="absolute top-4 right-4 text-4xl text-[#bfa14a] focus:outline-none"
+                onClick={() => setMobileNavOpen(false)}
+                aria-label="Close navigation"
+              >
+                &times;
+              </button>
+              <nav className="grid grid-cols-2 space-y-24 text-lg  font-bold w-[300] text-center">
+                <button onClick={abt} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">About</button>
+                <button onClick={service} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Featured Services</button>
+                <button onClick={blog} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Blog</button>
+                <button onClick={recepi} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">E-book</button>
+                <button onClick={recepi} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Recent research</button>
+                <button onClick={recepi} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Nutrition Plans</button>
+                <button onClick={cont} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Contact</button>
+              </nav>
+              <div className="flex space-x-8 mt-10">
+                <Link href="#" aria-label="Facebook" className="social-icon-link">
+                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                </Link>
+                <Link href="#" aria-label="Instagram" className="social-icon-link">
+                  <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
 
+      {/* Home Section */}
       <main className="flex-1 relative z-10">
-        <section className="relative h-[85vh] w-full overflow-hidden">
+        <section className="relative h-[70vh] md:h-[85vh] w-full overflow-hidden opacity-90" id="home">
           <div className="absolute inset-0 bg-gradient-to-r from-black-900/80 via-black-950/70 to-black-900/80 z-0"></div>
           <Image
-            src="/fornt1.jpg?height=1200&width=2000"
+            src="/image.jpg?height=1200&width=2000"
             alt="Kara Lydon in kitchen"
             fill
             className="object-cover transform scale-105 animate-slow-zoom opacity-60"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black-950/90"></div>
-          <div className="absolute bottom-32 left-16 md:left-32 w-full z-10">
+          <div className="absolute bottom-12 left-4 md:bottom-32 md:left-32 w-full z-10 px-2 md:px-0">
             <div className="overflow-hidden mb-2">
               <AnimatedHeading
                 text="A Healthy outside"
-                className="bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] text-5xl md:text-6xl font-extrabold tracking-wide leading-tight drop-shadow-sm"
+                className="bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-wide font-serif leading-tight drop-shadow-sm"
                 initialDelay={0.3}
               />
             </div>
             <div className="overflow-hidden">
               <AnimatedHeading
                 text=" starts from the inside"
-                className="bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] text-5xl md:text-6xl font-extrabold tracking-wide leading-tight drop-shadow-sm block"
+                className="bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-extrabold tracking-wide leading-tight drop-shadow-sm block"
                 delay={1000}
                 duration={2000}
               />
             </div>
-            <div className="mt-8 overflow-hidden">
+            <div className="mt-6 md:mt-8 overflow-hidden">
               <div className="animate-slide-up" style={{ animationDelay: "0.9s" }}>
-                <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group">
-                  <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
+                <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
+                  <span className="mr-2 group-hover:tracking-wider transition-all text-lg md:text-2xl font-bold text-black duration-300">
                     Start Your Journey
                   </span>
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>
+                    <ArrowRight className="ml-2 h-6 md:h-8 w-6 md:w-8 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
                 </button>
               </div>
             </div>
           </div>
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20">
             <button
               onClick={handleScrollToFeatured}
-              className="bg-[#bfa14a] hover:bg-[#968045] text-black-950 px-6 py-2 rounded-full shadow-lg transition-all duration-300 font-semibold"
+              className="bg-[#bfa14a] hover:bg-[#968045] text-black-950 px-4 md:px-6 py-2 rounded-full shadow-lg transition-all duration-300 font-semibold text-base md:text-lg"
               aria-label="Scroll to Featured Services"
             >
               ↓ Scroll Down
             </button>
           </div>
-          <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black-950 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-16 md:h-24 bg-gradient-to-t from-black-950 to-transparent"></div>
         </section>
         <section id="about" className="relative">
           <AnimatedSection className="py-20 bg-black-950 relative" ref={featuredRef} >
@@ -171,9 +238,9 @@ export default function Home() {
                 <div className="flex justify-center">
                   <Link
                     href="/about"
-                    className="group inline-flex items-center px-8 py-3 border-2 border-[#bfa14a] hover:bg-[#bfa14a] hover:text-black-950 transition-all duration-300 rounded-full overflow-hidden relative"
+                    className="group inline-flex items-center px-8 py-3 border-2 border-[#bfa14a] hover:bg-[#bfa14a] hover:text-black transition-all duration-300 rounded-full overflow-hidden relative"
                   >
-                    <span className="relative z-10 group-hover:tracking-wider hover:text-black-950  transition-all duration-300 bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938]">
+                    <span className="relative z-10 group-hover:tracking-wider hover:text-black  transition-all duration-300 bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938]">
                       LEARN MORE
                     </span>
                     <span className="absolute inset-0 bg-[#bfa14a] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
@@ -273,7 +340,7 @@ export default function Home() {
                     delay: 0.2,
                   },
                   {
-                    title: "Women&apos;s health and hormones ",
+                    title: "Women's health and hormones ",
                     date: "April 28, 2023",
                     link: "/b2",
                     excerpt:
@@ -327,10 +394,10 @@ export default function Home() {
               </div>
               <div className="mt-12 text-center">
                 <Link
-                  href="/blog"
+                  href="/blogs"
                   className="group inline-flex items-center px-8 py-3 border-2 border-[#bfa14a] text-[#bfa14a] hover:bg-[#bfa14a] hover:text-black transition-all duration-300 rounded-full overflow-hidden relative"
                 >
-                  <span className="relative z-10 group-hover:tracking-wider hover:text-black-950 bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] transition-all duration-300">
+                  <span className="relative z-10 group-hover:tracking-wider hover:text-black bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] transition-all duration-300">
                     VIEW ALL POSTS
                   </span>
                   <span className="absolute inset-0 bg-[#bfa14a] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
@@ -340,7 +407,7 @@ export default function Home() {
             <ColorfulDivider position="bottom" />
           </AnimatedSection>
         </section>
-        <section id="service" className="relative">
+        <section id="contact" className="relative">
           <AnimatedSection className="py-20 bg-gradient-to-b from-black-950 via-black-900 to-black-950 relative">
             <div className="container mx-auto px-4" >
               <TextReveal>
@@ -354,24 +421,26 @@ export default function Home() {
                   <p className="text-amber-100 mb-6 text-lg">
                     Reach out to us via email or follow us on social media for the latest updates and tips.
                   </p>
+                  <div className="flex justify-center space-x-4">
                   <Link
                     href="mailto: ">
-                    <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group">
-                      <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
+                    <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center ">
+                      <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300 ">
                         Email Us
                       </span>
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </button>
+                      <span><ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+</span>                    </button>
                   </Link>
                   <Link
                     href="mailto: ">
-                    <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group">
+                    <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 flex items-center  rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group">
                       <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
                         Call Us
                       </span>
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      <span><ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" /></span>
                     </button>
                   </Link>
+                  </div>
 
 
 
@@ -692,7 +761,7 @@ function ColorfulDivider({ position = "bottom" }) {
       >
         <path
           d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-          className="fill-current text-black-950"
+          className="fill-current text-gray-950 dark:text-gray-800"
         ></path>
       </motion.svg>
     </div>
