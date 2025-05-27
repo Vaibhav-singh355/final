@@ -68,20 +68,20 @@ export default function Home() {
 
       {/* Header */}
       <header className="container mx-auto px-4 md:px-6 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
-        <div className="w-20 md:w-64 transition-transform duration-300 hover:scale-105 flex-shrink-0 hidden md:block">
+        <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0 hidden md:block">
           <Link href="/">
             <Image
-              src="/logo.jpg?height=100&width=260"
+              src="/logo.png?height=100&width=260"
               alt="Kara Lydon Nutrition"
               width={100}
               height={40}
-              className="object-cover rounded-full"
+              className="object-cover rounded-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
               priority
             />
           </Link>
         </div>
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-4 lg:space-x-8 md:mr-96  ">
+        <nav className="hidden md:flex space-x-4 lg:space-x-8 md:mr-12  ">
           <button onClick={abt} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-extrabold tracking-wide relative group py-2 block">
             About
           </button>
@@ -172,7 +172,7 @@ export default function Home() {
             src="/image.jpg?height=1200&width=2000"
             alt="Kara Lydon in kitchen"
             fill
-            className="object-cover transform scale-105 animate-slow-zoom opacity-60"
+            className="object-cover transform scale-105 animate-slow-zoom opacity-80"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black-950/90"></div>

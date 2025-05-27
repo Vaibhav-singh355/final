@@ -28,14 +28,14 @@ const page = () => {
       <BackgroundDecoration />
 
       <header className="container mx-auto px-4 py-6 grid grid-cols-2 relative z-10">
-        <div className="w-64 transition-transform duration-300 hover:scale-105">
+        <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0 hidden md:block">
           <Link href="/">
             <Image
-              src="/logo.jpg?height=100&width=260"
+              src="/logo.png?height=100&width=260"
               alt="Kara Lydon Nutrition"
               width={100}
               height={40}
-              className="object-cover rounded-full"
+              className="object-cover rounded-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
               priority
             />
           </Link>
