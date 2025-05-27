@@ -68,7 +68,7 @@ export default function Home() {
 
       {/* Header */}
       <header className="container mx-auto px-4 md:px-6 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
-        <div className="w-40 md:w-64 transition-transform duration-300 hover:scale-105 flex-shrink-0">
+        <div className="w-20 md:w-64 transition-transform duration-300 hover:scale-105 flex-shrink-0 hidden md:block">
           <Link href="/">
             <Image
               src="/logo.jpg?height=100&width=260"
@@ -81,40 +81,34 @@ export default function Home() {
           </Link>
         </div>
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-4 lg:space-x-8">
-          <button onClick={abt} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
+        <nav className="hidden md:flex space-x-4 lg:space-x-8 md:mr-96  ">
+          <button onClick={abt} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-extrabold tracking-wide relative group py-2 block">
             About
           </button>
-          <button onClick={service} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
+          <button onClick={service} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-extrabold tracking-wide relative group py-2 block">
             Featured Services
           </button>
-          <button onClick={blog} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
+          <button onClick={blog} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-extrabold tracking-wide relative group py-2 block">
             Blog
           </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
-            E-book
-          </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
-            Recent research
-          </button>
-          <button onClick={recepi} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
-            Nutrition Plans
-          </button>
-          <button onClick={cont} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-bold tracking-wide relative group py-2 block">
+          <button onClick={cont} className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700 text-xl font-extrabold tracking-wide relative group py-2 block">
             Contact
           </button>
         </nav>
         {/* Desktop Social */}
-        <div className="hidden md:flex items-center space-x-4">
-          <Link href="#" aria-label="Facebook" className="social-icon-link">
-            <Facebook className="h-8 w-10 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-          </Link>
-          <Link href="#" aria-label="Instagram" className="social-icon-link">
-            <Instagram className="h-8 w-10 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-          </Link>
-        </div>
+       
         {/* Mobile Hamburger */}
-        <div className="flex md:hidden w-full justify-end">
+        <div className="flex justify-between items-center md:hidden w-full ">
+          <Link href="/">
+            <Image
+              src="/logo.jpg?height=100&width=260"
+              alt="Kara Lydon Nutrition"
+              width={100}
+              height={40}
+              className="object-cover rounded-full"
+              priority
+            />
+          </Link>
           <button
             className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#bfa14a]"
             onClick={() => setMobileNavOpen((v) => !v)}
@@ -126,10 +120,11 @@ export default function Home() {
               <line x1="6" y1="22" x2="26" y2="22" />
             </svg>
           </button>
+          
         </div>
         {/* Mobile Nav Drawer */}
-        {mobileNavOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center md:hidden transition-all">
+         {mobileNavOpen && (
+          <div className="fixed inset-0 z-50 flex items-start justify-center md:hidden">
             {/* Backdrop */}
             <div
               className="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm transition-opacity"
@@ -137,7 +132,8 @@ export default function Home() {
               aria-label="Close navigation"
             />
             {/* Drawer */}
-            <div className="relative bg-black-950 rounded-xl shadow-2xl w-11/12 max-w-sm mx-auto p-2 flex flex-col items-center animate-fade-in-up z-10">
+            <div className="relative bg-black-950 rounded-b-xl shadow-2xl w-full max-w-md mx-auto pt-8 pb-10 px-6 flex flex-col items-start z-10 animate-slide-in-top"
+                 style={{ marginTop: 0 }}>
               <button
                 className="absolute top-4 right-4 text-4xl text-[#bfa14a] focus:outline-none"
                 onClick={() => setMobileNavOpen(false)}
@@ -145,25 +141,26 @@ export default function Home() {
               >
                 &times;
               </button>
-              <nav className="grid grid-cols-2 space-y-24 text-lg  font-bold w-[300] text-center">
-                <button onClick={abt} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">About</button>
-                <button onClick={service} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Featured Services</button>
-                <button onClick={blog} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Blog</button>
-                <button onClick={recepi} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">E-book</button>
-                <button onClick={recepi} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Recent research</button>
-                <button onClick={recepi} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Nutrition Plans</button>
-                <button onClick={cont} className="text-[#bfa14a]  rounded hover:bg-black-900 transition">Contact</button>
+              <nav className="grid grid-cols-4 space-y-4 w-full mt-8">
+                <button onClick={abt} className="w-full py-3 text-sm text-[#bfa14a] font-bold rounded hover:bg-black-900 transition">About</button>
+                <button onClick={service} className="w-full py-3 text-sm text-[#bfa14a] font-bold rounded hover:bg-black-900 transition">Featured Services</button>
+                <button onClick={blog} className="w-full py-3 text-sm text-[#bfa14a] font-bold rounded hover:bg-black-900 transition">Blog</button>
+                
+                <button onClick={cont} className="w-full py-3 text-sm text-[#bfa14a] font-bold rounded hover:bg-black-900 transition">Contact</button>
               </nav>
-              <div className="flex space-x-8 mt-10">
-                <Link href="#" aria-label="Facebook" className="social-icon-link">
-                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
-                <Link href="#" aria-label="Instagram" className="social-icon-link">
-                  <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
-              </div>
+              
             </div>
-          </div>
+            <style jsx global>{`
+      .animate-slide-in {
+        animation: slideInDrawer 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      @keyframes slideInDrawer {
+        from { transform: translateY(40px) scale(0.98); opacity: 0; }
+        to { transform: translateY(0) scale(1); opacity: 1; }
+      }
+    `}</style>
+  </div>
+          
         )}
       </header>
 
@@ -197,7 +194,7 @@ export default function Home() {
             </div>
             <div className="mt-6 md:mt-8 overflow-hidden">
               <div className="animate-slide-up" style={{ animationDelay: "0.9s" }}>
-                <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
+                <button onClick={cont} className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
                   <span className="mr-2 group-hover:tracking-wider transition-all text-lg md:text-2xl font-bold text-black duration-300">
                     Start Your Journey
                   </span>
@@ -208,7 +205,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="absolute bottom-4 hidden md:bottom-6 left-1/2 transform -translate-x-1/2 z-20">
             <button
               onClick={handleScrollToFeatured}
               className="bg-[#bfa14a] hover:bg-[#968045] text-black-950 px-4 md:px-6 py-2 rounded-full shadow-lg transition-all duration-300 font-semibold text-base md:text-lg"
@@ -231,9 +228,7 @@ export default function Home() {
                   </TextReveal>
                 </h2>
                 <TextReveal className="text-amber-100 mb-8 leading-relaxed text-lg" delay={0.5}>
-                  I&apos;m Ekta, a registered dietitian nutritionist, yoga teacher, and intuitive eating counselor helping
-                  people find the peace and freedom in their relationship with food and their bodies through a non-diet,
-                  whole-person approach to nutrition and wellness.
+                  Hi, I’m Ekta Singh—a nutritionist and gut health expert passionate about helping you feel your best from the inside out. I believe that true wellness begins in the gut, and I specialize in creating personalized nutrition plans that not only support digestion but also improve energy, immunity, and overall vitality. With a blend of science-backed strategies and a holistic approach, I guide my clients toward sustainable lifestyle changes that bring real, lasting results. My mission is to empower you with the knowledge and tools you need to take control of your health—because when your gut is happy, so are you. 
                 </TextReveal>
                 <div className="flex justify-center">
                   <Link
@@ -421,26 +416,34 @@ export default function Home() {
                   <p className="text-amber-100 mb-6 text-lg">
                     Reach out to us via email or follow us on social media for the latest updates and tips.
                   </p>
-                  <div className="flex justify-center space-x-4">
-                  <Link
-                    href="mailto: ">
-                    <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center ">
-                      <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300 ">
-                        Email Us
-                      </span>
-                      <span><ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-</span>                    </button>
-                  </Link>
-                  <Link
-                    href="mailto: ">
-                    <button className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 flex items-center  rounded-full px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group">
-                      <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
-                        Call Us
-                      </span>
-                      <span><ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" /></span>
-                    </button>
-                  </Link>
-                  </div>
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+  <a
+    href={`https://wa.me/9810307409?text=hello`}
+    target="_blank"
+    className="whatsapp-link relative"
+    rel="noreferrer noopener"
+    style={{ width: "100%" }}
+  >
+    <button className="w-full sm:w-auto bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
+      <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
+        Chat on WhatsApp
+      </span>
+      <span>
+        <Image src="/WhatsApp.svg.png" width={26} height={26} alt="wp" />
+      </span>
+    </button>
+  </a>
+  <a href="tel:+919810307409" style={{ width: "100%" }}>
+    <button className="w-full sm:w-auto bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 flex items-center rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group justify-center">
+      <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
+        Call Us
+      </span>
+      <span>
+        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+      </span>
+    </button>
+  </a>
+</div>
 
 
 
@@ -465,31 +468,12 @@ export default function Home() {
               </p>
               <div className="flex space-x-3">
                 <Link href="#" aria-label="Facebook" className="social-icon-link">
-                  <Facebook className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                <Link href="#" aria-label="Instagram" className="social-icon-link">
-                  <Instagram className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
+                  <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                <Link href="#" aria-label="Twitter" className="social-icon-link">
-                  <Twitter className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
-                <Link href="#" aria-label="Pinterest" className="social-icon-link">
-                  <span className="text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                      <path d="M21 12c0 4.418 -4.03 8 -9 8a9.863 9.863 0 0 1 -4.255 -.949l-3.745 .949v-3.586a8.955 8.955 0 0 1 -2 -5.414c0 -4.418 4.03 -8 9 -8s9 3.582 9 8z" />
-                    </svg>
-                  </span>
-                </Link>
+                
               </div>
             </div>
 
@@ -527,18 +511,13 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-medium text-gradient-gold mb-4">Contact</h3>
-              <p className="text-amber-100 mb-2">Email: hello@karalydon.com</p>
-              <p className="text-amber-100 mb-4">Boston, MA</p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-2 border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black-950 transition-all duration-300 rounded-full group"
-              >
-                <span className="group-hover:tracking-wider transition-all duration-300">GET IN TOUCH</span>
-                <span className="ml-1 transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300">
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
+              <h3 className="text-xl font-bold text-gradient-gold mb-4">Contact</h3>
+              <p className="text-amber-100 mb-2 font-bold text-lg">Email: ekta@thrivin.in</p>
+              <p className="text-amber-100 mb-2 font-bold text-lg flex items-center justify-start">
+                         <span><Image src="/call.webp" width={30} height={30}   alt='wp'/>
+</span>    <span className="ml-3">+91 9810307409</span>          
+                      </p>
+              
             </div>
 
           </div>

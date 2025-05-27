@@ -1,9 +1,9 @@
 'use client'
-import {  useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import Image from "next/image"
 
-import { Facebook, Instagram, Twitter,  ArrowRight } from "lucide-react"
+import { Facebook, Instagram, Twitter, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const page = () => {
@@ -12,7 +12,7 @@ const page = () => {
       <BackgroundDecoration />
 
       <header className="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
-        <div className="w-64 transition-transform duration-300 hover:scale-105">
+        <div className="w-64 transition-transform duration-300 hover:scale-105 ">
           <Link href="/">
             <Image
               src="/logo.jpg?height=100&width=260"
@@ -25,23 +25,12 @@ const page = () => {
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
-          <Link href="#" aria-label="Facebook" className="social-icon-link">
-            <Facebook className="h-8 w-8 text-gold-500 hover:text-amber-500 transition-all duration-300 hover:scale-125" />
-          </Link>
-          <Link href="#" aria-label="Instagram" className="social-icon-link">
-            <Instagram className="h-8 w-8 text-gold-500 hover:text-amber-500 transition-all duration-300 hover:scale-125" />
-          </Link>
-         
-          
-          
-        </div>
-      </header>
+       </header>
 
       <main className="flex-1 relative z-10">
         <section className="py-12 md:py-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+          <div className="container mx-auto px-2">
+            <div className="w-full mx-auto px-4 md:px-10 lg:px-16">
               <div className="text-center mb-12">
                 <TextReveal>
                   <h2 className="text-3xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#968045] via-[#bfa14a] to-[#7a6938] mb-12 text-center">
@@ -56,7 +45,7 @@ const page = () => {
                   <Image
                     src="/abt.jpg?height=600&width=600"
                     alt="Kara Lydon"
-                    width={600}
+                    width={800}
                     height={600}
                     className="rounded-lg transform hover:scale-105 transition-transform duration-700"
                   />
@@ -67,41 +56,128 @@ const page = () => {
 
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.4}>
-                    Hi there! I&apos;m Ekta Singh, a registered dietitian nutritionist, yoga teacher, and intuitive eating
-                    counselor.
+                    Welcome! Before I guide you on your journey to better health, I’d love to share the story behind mine—a journey shaped by discipline, self-discovery, and a deep passion for wellness.
 
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.5}>
-                    I had paricipated in many ramp shows and
-                    beauty contests and hence this kept me conscious of my way my
-                    body looked
+                    I wasn’t always a fitness enthusiast. Growing up, I was a dedicated student with little interest in sports. My heart belonged to music, dance, and the world of fashion and glamour, which led me to participate in numerous ramp shows and beauty pageants. These experiences made me conscious of my appearance and nudged me toward clean eating and a healthy lifestyle early on. What began as a desire to simply look good soon evolved into a realization that mindful habits could elevate every aspect of my life. During my corporate years, music was my emotional anchor, and dance—particularly jazz and salsa—kept me physically active and mentally refreshed. My love for nature and sunrise walks eventually unfolded into a deeper understanding: that movement, nutrition, sleep, and self-discipline are the true pillars of well-being.
 
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.6}>
-                    A
-                    healthy addictioin made me passionate about fitness and I
-                    participated in a fitness compe on in 2013 at FITNBESS FIRST
-                    where I won prizes worth 1 lakh and recogni on of being the
-                    STRONGEST GIRL OF THE GYM. Learning and studying has always
-                    been my passion
+                    At 29, I stepped into a gym for the first time—completely unfamiliar with the equipment and unsure of where to begin. With the support of a personal trainer, I committed to two disciplined hours every day. My transformation was not just physical—it was empowering. The visible strength, energy, and confidence I gained became a driving force, and before long, fitness turned into my greatest passion. In 2013, I proudly won the title of “Strongest Girl in the Gym” at Fitness First, along with awards worth ₹1 lakh. This milestone fueled my curiosity to dive deeper into the science of health and performance.
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.6}>
-                    My approach combines intuitive eating principles, mindfulness practices, and evidence-based
-                    nutrition to support sustainable health and wellbeing.
+                    An eternal student at heart, I pursued a Personal Training Certification from the American Council on Exercise (ACE), followed by multiple specializations including Strong by Zumba, Yoga, and the Reebok Fitness program. I found myself immersed in studying the powerful connection between food, movement, and mindset. Slowly, my lifestyle transformed: clean eating, proper hydration, circadian-aligned routines, mindful meditation, and gratitude became my daily rhythm. Through consistent practice and purpose, I discovered that true health is not just the absence of illness—it is a radiant state of vitality, joy, resilience, and inner harmony.
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.6}>
-                    I did the ACE approved nutrition course and became a
-                    sports and clinical nutritionist with expertise in gut health .
+                    My passion for food and its profound impact on our bodies led me to further pursue certification as a Sports and Clinical Nutritionist, with an advanced focus on gut health. Why gut health? Because it is the command center of overall wellness—impacting digestion, immunity, mood, and inflammation. Supporting our gut through mindful nutrition and lifestyle practices empowers the body to flourish from within.
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.6}>
-                    Did many fitness certificate on to enhance my skills
-                    like STRONG BY ZUMBA certification , yoga courses and  REEBOK
-                    fitness course.
+                    Today, after more than 15 years of living this journey, I am proud to lead by example—not just as a wellness coach, but as a mother to a 19-year-old daughter, with a metabolic age of 20. This transformation is rooted in consistency, knowledge, and self-love. I have had the privilege of guiding countless individuals toward better health, and my mission is to extend this impact to a larger community—helping people reconnect with their bodies, heal from within, and build a life rooted in strength, balance, and vibrant health.
                   </TextReveal>
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.6}>
+                   Let’s begin this journey together—toward a healthier, happier you. </TextReveal>
+                </div>
+              </AnimatedSection>
+
+              
+              <AnimatedSection className="mb-16">
+                <TextReveal delay={0.2}>
+                  <h2 className="text-gradient-gold-amber text-3xl font-light mb-8">
+                    <ScrambleText text="Certificates and Acheivements" duration={1500} />
+                  </h2>
+                </TextReveal>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    {
+                      title: "Fitness First Certification",
+                      issuer: "ACE Approved",
+                      year: "2016",
+                      image: "/c1.jpg",
+                      description:
+                        "Advanced certification of wining strength category in Fitness First",
+                    },
+                    {
+                      title: "Fitness First Certification",
+                      issuer: "Zumba Fitness",
+                      year: "2013",
+                      image: "/c2.jpg",
+                      description: "First prize at Bosuball Challenge ",
+                    },
+                    
+                  ].map((cert, index) => (
+                    <TextReveal key={index} delay={0.3 + index * 0.1}>
+                      <div className="bg-black-900 border border-gold-500/20 p-6 rounded-lg shadow-inner hover:border-gold-500/40 transition-all duration-300 group">
+                        <div className="relative overflow-hidden rounded-lg mb-4">
+                          <Image
+                            src={cert.image || "/placeholder.svg"}
+                            alt={cert.title}
+                            width={200}
+                            height={200}
+                            className="w-full h-90 object-fit transform group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-gold-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                        <h3 className="text-gold-500 font-medium mb-2 group-hover:text-amber-400 transition-colors duration-300">
+                          {cert.title}
+                        </h3>
+                       
+                        <p className="text-amber-500 text-sm mb-3">{cert.year}</p>
+                        <p className="text-amber-100 text-sm leading-relaxed">{cert.description}</p>
+                      </div>
+                    </TextReveal>
+                  ))}
                 </div>
               </AnimatedSection>
 
               <AnimatedSection className="mb-16">
+                <TextReveal delay={0.2}>
+                  <h2 className="text-gradient-gold-amber text-3xl font-light mb-6">
+                    <ScrambleText text="How do I work closely -WITH YOU , FOR YOU" duration={1500} />
+                  </h2>
+                </TextReveal>
+                <div className="bg-black-900 border border-gold-500/20 p-8 rounded-lg shadow-inner">
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed font-bold" delay={0.3}>
+                    Gut microbiome plays a pivotal role in health and disease. At THRIVIN, I aim to cultivate a healthier individual by focusing on this Gut MICROBIOME
+
+                    MICROBIOME is the central point for preventing, treating and protecting against various health issues. With this approach I work very closely with individuals to :
+
+                  </TextReveal>
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.4}>
+                    1.	ASSESS :
+                    Assess your current diet, lifestyle and health conditions through a proper blood work to identify factors that may be impacting your gut microbiome
+
+                  </TextReveal>
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.5}>
+                    2.	EDUCATE :
+                    Educate you about the importance of a balanced gut microbiome and how dietary choices can influence gut health gut microbiome
+
+
+                  </TextReveal>
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.5}>
+                    3.	PERSONALISED DIET PLANS :
+                    I Provide you personalized nutrition recommendations tailored to your unique needs and goals. This may involve creating meal plans, suggesting dietary changes and recommending supplements to support gut health if need be.
+
+
+                  </TextReveal>
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.5}>
+                    4.	MONITORING AND SUPPORT :
+                    I monitor your progress and provide ongoing support and guidance to help you implement dietary changes and improve your gut microbiome. This includes regular check ups, adjustments to nutrition plans and troubleshooting any challenges
+
+
+                  </TextReveal>
+                  <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.5}>
+                    5.	COLLABORATION :
+                    Collaborate with other health care professional;s such as doctors, gastroenterologists, dietitions to ensure comprehensive care for your digestive issues or gut related conditions
+
+
+
+
+                  </TextReveal>
+
+                </div>
+              </AnimatedSection>
+<AnimatedSection className="mb-16">
                 <TextReveal delay={0.2}>
                   <h2 className="text-gradient-gold-amber text-3xl font-light mb-6">
                     <ScrambleText text="My Philosophy" duration={1500} />
@@ -111,8 +187,8 @@ const page = () => {
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.3}>
                     I believe that true health encompasses physical, mental, and emotional wellbeing. My approach to
                     nutrition is rooted in the principles of intuitive eating, which encourages tuning into your body&apos;s
-  natural hunger and fullness cues, making peace with all foods, and finding joy in eating.
-</TextReveal>
+                    natural hunger and fullness cues, making peace with all foods, and finding joy in eating.
+                  </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.4}>
                     I reject diet culture and weight-centric approaches to health. Instead, I focus on helping clients
                     develop sustainable habits that support their overall wellbeing without restriction or rules.
@@ -155,22 +231,14 @@ const page = () => {
               </AnimatedSection>
 
               <AnimatedSection className="text-center">
-                <Link
-                  href="/work-with-us"
-                  className="group inline-flex items-center px-8 py-3 border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black-950 transition-all duration-300 rounded-full overflow-hidden relative"
-                >
-                  <span className="relative z-10 group-hover:tracking-wider transition-all duration-300">
-                    WORK WITH ME
-                  </span>
-                  <span className="absolute inset-0 bg-gold-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
-                </Link>
+
               </AnimatedSection>
             </div>
           </div>
         </section>
       </main>
 
-       <footer className="bg-black-900 py-16 relative z-10 border-t border-[#bfa14a]/20">
+      <footer className="bg-black-900 py-16 relative z-10 border-t border-[#bfa14a]/20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-44">
             <div>
@@ -181,41 +249,22 @@ const page = () => {
               </p>
               <div className="flex space-x-3">
                 <Link href="#" aria-label="Facebook" className="social-icon-link">
-                  <Facebook className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                <Link href="#" aria-label="Instagram" className="social-icon-link">
-                  <Instagram className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
+                  <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                <Link href="#" aria-label="Twitter" className="social-icon-link">
-                  <Twitter className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
-                <Link href="#" aria-label="Pinterest" className="social-icon-link">
-                  <span className="text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                      <path d="M21 12c0 4.418 -4.03 8 -9 8a9.863 9.863 0 0 1 -4.255 -.949l-3.745 .949v-3.586a8.955 8.955 0 0 1 -2 -5.414c0 -4.418 4.03 -8 9 -8s9 3.582 9 8z" />
-                    </svg>
-                  </span>
-                </Link>
+                
               </div>
             </div>
-           
+
             <div>
               <h3 className="text-lg font-medium" style={{ color: "#7a6938" }}>Popular Posts</h3>
               <ul className="space-y-4">
                 {[
-                  { title: "Nutrition and Gut health", href: "/b1", color: "#bfa14a",image: "/gut.png?height=100&width=100" },
+                  { title: "Nutrition and Gut health", href: "/b1", color: "#bfa14a", image: "/gut.png?height=100&width=100" },
                   { title: "Women's Health", href: "/b2", color: "#968045", image: "/w.jpg?height=100&width=100" },
-                  { title: "Fitness and Health", href: "/b3", color: "#bfa14a",image: "/fit.jpg?height=100&width=100" },
+                  { title: "Fitness and Health", href: "/b3", color: "#bfa14a", image: "/fit.jpg?height=100&width=100" },
                 ].map((post, index) => (
                   <li key={index}>
                     <Link
@@ -242,21 +291,16 @@ const page = () => {
                 ))}
               </ul>
             </div>
-             <div>
-              <h3 className="text-lg font-medium text-gradient-gold mb-4">Contact</h3>
-              <p className="text-amber-100 mb-2">Email: hello@karalydon.com</p>
-              <p className="text-amber-100 mb-4">Boston, MA</p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-2 border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black-950 transition-all duration-300 rounded-full group"
-              >
-                <span className="group-hover:tracking-wider transition-all duration-300">GET IN TOUCH</span>
-                <span className="ml-1 transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300">
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
+            <div>
+              <h3 className="text-xl font-bold text-gradient-gold mb-4">Contact</h3>
+              <p className="text-amber-100 mb-2 font-bold text-lg">Email: ekta@thrivin.in</p>
+              <p className="text-amber-100 mb-2 font-bold text-lg flex items-center justify-start">
+                         <span><Image src="/call.webp" width={30} height={30}   alt='wp'/>
+</span>    <span className="ml-3">+91 9810307409</span>          
+                      </p>
+              
             </div>
-            
+
           </div>
           <div className="mt-12 pt-8 border-t border-[#bfa14a]/20 text-center">
             <p className="animate-gold-shine text-lg font-bold" style={{ color: "#bfa14a" }}>
@@ -265,7 +309,6 @@ const page = () => {
           </div>
         </div>
       </footer>
-
     </div>
   )
 }

@@ -27,7 +27,7 @@ const page = () => {
     <div className="flex min-h-screen flex-col overflow-hidden bg-black-950 text-amber-50">
       <BackgroundDecoration />
 
-      <header className="container mx-auto px-4 py-6 flex justify-between items-center relative z-10">
+      <header className="container mx-auto px-4 py-6 grid grid-cols-2 relative z-10">
         <div className="w-64 transition-transform duration-300 hover:scale-105">
           <Link href="/">
             <Image
@@ -40,30 +40,20 @@ const page = () => {
             />
           </Link>
         </div>
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 items-center ">
           <Link href="/" className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-2xl font-extrabold transition-colors duration-300 block"> 
             Home
           </Link>
           <Link href="/about" className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-2xl font-extrabold transition-colors duration-300"> 
             About
           </Link>
-          <Link href="/blog" className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-2xl font-extrabold transition-colors duration-300">
+          <Link href="/blogs" className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-700 via-amber-500 to-amber-700  text-2xl font-extrabold transition-colors duration-300">
             Blog
           </Link>
           </nav>
 
 
-        <div className="hidden md:flex items-center space-x-4">
-          <Link href="#" aria-label="Facebook" className="social-icon-link">
-            <Facebook className="h-8 w-8 text-gold-500 hover:text-amber-500 transition-all duration-300 hover:scale-125" />
-          </Link>
-          <Link href="#" aria-label="Instagram" className="social-icon-link">
-            <Instagram className="h-8 w-8 text-gold-500 hover:text-amber-500 transition-all duration-300 hover:scale-125" />
-          </Link>
-         
-          
-          
-        </div>
+       
       </header>
       <main className="flex-1 relative z-10">
         {/* Breadcrumb */}
@@ -74,7 +64,7 @@ const page = () => {
                 Home
               </Link>
               <span className="text-amber-400">/</span>
-              <Link href="/blog" className="text-gold-500 hover:text-gold-400 transition-colors duration-300">
+              <Link href="/blogs" className="text-gold-500 hover:text-gold-400 transition-colors duration-300">
                 Blog
               </Link>
               <span className="text-amber-400">/</span>
@@ -228,7 +218,7 @@ const page = () => {
         </AnimatedSection>
       </main>
 
-       <footer className="bg-black-900 py-16 relative z-10 border-t border-[#bfa14a]/20">
+      <footer className="bg-black-900 py-16 relative z-10 border-t border-[#bfa14a]/20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-44">
             <div>
@@ -239,41 +229,22 @@ const page = () => {
               </p>
               <div className="flex space-x-3">
                 <Link href="#" aria-label="Facebook" className="social-icon-link">
-                  <Facebook className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                <Link href="#" aria-label="Instagram" className="social-icon-link">
-                  <Instagram className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
+                  <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                <Link href="#" aria-label="Twitter" className="social-icon-link">
-                  <Twitter className="h-5 w-5 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
-                <Link href="#" aria-label="Pinterest" className="social-icon-link">
-                  <span className="text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                      <path d="M21 12c0 4.418 -4.03 8 -9 8a9.863 9.863 0 0 1 -4.255 -.949l-3.745 .949v-3.586a8.955 8.955 0 0 1 -2 -5.414c0 -4.418 4.03 -8 9 -8s9 3.582 9 8z" />
-                    </svg>
-                  </span>
-                </Link>
+                
               </div>
             </div>
-           
+
             <div>
               <h3 className="text-lg font-medium" style={{ color: "#7a6938" }}>Popular Posts</h3>
               <ul className="space-y-4">
                 {[
-                  { title: "Nutrition and Gut health", href: "/b1", color: "#bfa14a",image: "/gut.png?height=100&width=100" },
+                  { title: "Nutrition and Gut health", href: "/b1", color: "#bfa14a", image: "/gut.png?height=100&width=100" },
                   { title: "Women's Health", href: "/b2", color: "#968045", image: "/w.jpg?height=100&width=100" },
-                  { title: "Fitness and Health", href: "/b3", color: "#bfa14a",image: "/fit.jpg?height=100&width=100" },
+                  { title: "Fitness and Health", href: "/b3", color: "#bfa14a", image: "/fit.jpg?height=100&width=100" },
                 ].map((post, index) => (
                   <li key={index}>
                     <Link
@@ -300,21 +271,16 @@ const page = () => {
                 ))}
               </ul>
             </div>
-             <div>
-              <h3 className="text-lg font-medium text-gradient-gold mb-4">Contact</h3>
-              <p className="text-amber-100 mb-2">Email: hello@karalydon.com</p>
-              <p className="text-amber-100 mb-4">Boston, MA</p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-2 border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black-950 transition-all duration-300 rounded-full group"
-              >
-                <span className="group-hover:tracking-wider transition-all duration-300">GET IN TOUCH</span>
-                <span className="ml-1 transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300">
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
+            <div>
+              <h3 className="text-xl font-bold text-gradient-gold mb-4">Contact</h3>
+              <p className="text-amber-100 mb-2 font-bold text-lg">Email: ekta@thrivin.in</p>
+              <p className="text-amber-100 mb-2 font-bold text-lg flex items-center justify-start">
+                         <span><Image src="/call.webp" width={30} height={30}   alt='wp'/>
+</span>    <span className="ml-3">+91 9810307409</span>          
+                      </p>
+              
             </div>
-            
+
           </div>
           <div className="mt-12 pt-8 border-t border-[#bfa14a]/20 text-center">
             <p className="animate-gold-shine text-lg font-bold" style={{ color: "#bfa14a" }}>
@@ -323,7 +289,6 @@ const page = () => {
           </div>
         </div>
       </footer>
-
     </div>
   )
 }
