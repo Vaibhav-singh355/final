@@ -12,7 +12,7 @@ const page = () => {
       <BackgroundDecoration />
 
       <header className="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
-        <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0 hidden md:block">
+        <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0  md:block">
           <Link href="/">
             <Image
               src="/logo.png?height=100&width=260"

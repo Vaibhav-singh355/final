@@ -101,11 +101,11 @@ export default function Home() {
         <div className="flex justify-between items-center md:hidden w-full ">
           <Link href="/">
             <Image
-              src="/logo.jpg?height=100&width=260"
+              src="/logo.png?height=100&width=260"
               alt="Kara Lydon Nutrition"
               width={100}
               height={40}
-              className="object-cover rounded-full"
+              className="object-cover rounded-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
               priority
             />
           </Link>
