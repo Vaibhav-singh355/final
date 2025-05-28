@@ -211,7 +211,7 @@ const page = () => {
                     { text: "Registered Dietitian Nutritionist (RDN)", color: "gold" },
                     { text: "Licensed Dietitian Nutritionist (LDN)", color: "amber" },
                     { text: "Certified Intuitive Eating Counselor", color: "gold" },
-                    { text: "200-Hour Registered Yoga Teacher (RYT-200)", color: "amber" },
+                    
                     { text: "Master of Science in Nutrition", color: "gold" },
                   ].map((credential, index) => (
                     <TextReveal key={index} delay={0.3 + index * 0.1}>

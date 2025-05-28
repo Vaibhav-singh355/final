@@ -169,10 +169,10 @@ export default function Home() {
         <section className="relative h-[70vh] md:h-[85vh] w-full overflow-hidden opacity-90" id="home">
           <div className="absolute inset-0 bg-gradient-to-r from-black-900/80 via-black-950/70 to-black-900/80 z-0"></div>
           <Image
-            src="/image.jpg?height=1200&width=2000"
+            src="/ektabg.jpg?height=1200&width=2000"
             alt="Kara Lydon in kitchen"
             fill
-            className="object-cover transform scale-105 animate-slow-zoom opacity-80"
+            className="object-fit transform scale-105 animate-slow-zoom opacity-80"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black-950/90"></div>
@@ -228,7 +228,7 @@ export default function Home() {
                   </TextReveal>
                 </h2>
                 <TextReveal className="text-amber-100 mb-8 leading-relaxed text-lg" delay={0.5}>
-                  Hi, I’m Ekta Singh—a nutritionist and gut health expert passionate about helping you feel your best from the inside out. I believe that true wellness begins in the gut, and I specialize in creating personalized nutrition plans that not only support digestion but also improve energy, immunity, and overall vitality. With a blend of science-backed strategies and a holistic approach, I guide my clients toward sustainable lifestyle changes that bring real, lasting results. My mission is to empower you with the knowledge and tools you need to take control of your health—because when your gut is happy, so are you. 
+                  Hi, I’m Ekta Singh—a passionate holistic dietitian and health expert dedicated to transforming lives through mindful nutrition and sustainable lifestyle choices. I empowers individuals to achieve optimal health by addressing physical activities,diets and habbits.Through my platform, Nurture Yourself, I offers personalized diet and daily hobbies inspiring people  to embrace clean eating and active living for lasting vitality.. My mission is to empower you with the knowledge and tools you need to take control of your health. 
                 </TextReveal>
                 <div className="flex justify-center">
                   <Link
@@ -259,7 +259,7 @@ export default function Home() {
                   {
                     title: "Nutrition Counseling",
                     description: "One-on-one support to help you heal your relationship with food and your body.",
-                    link: "/work-with-us",
+                    link: "/three",
                     linkText: "Learn More",
                     image: "/n1.webp?height=400&width=600",
                     gradient: "from-[#968045] to-[#bfa14a]",
@@ -268,7 +268,7 @@ export default function Home() {
                   {
                     title: "Fitness & Nutrition Tips",
                     description: "Guidance on Fitting nutrition into your busy daily  life.",
-                    link: "/ebook",
+                    link: "/six",
                     linkText: "Learn More",
                     image: "/f.jpg?height=400&width=600",
                     gradient: "from-[#968045] to-[#bfa14a]",
@@ -277,8 +277,8 @@ export default function Home() {
                   {
                     title: "Expertise Gut Health",
                     description: "Personalized nutrition plans to support your gut health.",
-                    link: "/recipes",
-                    linkText: "Browse Recipes",
+                    link: "/twelve",
+                    linkText: "Learn more",
                     image: "/gut.jpg?height=400&width=600",
                     gradient: "from-[#968045] to-[#bfa14a]",
                     delay: 0.6,
@@ -304,6 +304,10 @@ export default function Home() {
                             {service.title}
                           </h3>
                           <p className="text-[#968045] mb-4">{service.description}</p>
+                           <Link href={service.link} className="text-[#bfa14a] hover:text-[#968045] font-medium inline-flex items-center group">
+                           <h3 className="text-xl font-medium text-[#7a6938] mb-2 group-hover:text-[#bfa14a] transition-colors duration-300">
+                            {service.linkText}
+                          </h3></Link>
                         </CardContent>
                       </Card>
                     </div>
