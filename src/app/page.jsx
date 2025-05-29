@@ -172,7 +172,7 @@ export default function Home() {
             src="/ektabg.jpg?height=1200&width=2000"
             alt="Kara Lydon in kitchen"
             fill
-            className="object-fit transform scale-105 animate-slow-zoom opacity-80"
+            className="object-fill transform scale-105 animate-slow-zoom opacity-80"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black-950/90"></div>
@@ -257,8 +257,8 @@ export default function Home() {
               <div className="grid md:grid-cols-3 gap-8">
                 {[
                   {
-                    title: "Nutrition Counseling",
-                    description: "One-on-one support to help you heal your relationship with food and your body.",
+                    title: "3-Month Program",
+                    description: "Jumpstart Your Transformation with a 3-Month Nutrition Program.",
                     link: "/three",
                     linkText: "Learn More",
                     image: "/n1.webp?height=400&width=600",
@@ -266,8 +266,8 @@ export default function Home() {
                     delay: 0.2,
                   },
                   {
-                    title: "Fitness & Nutrition Tips",
-                    description: "Guidance on Fitting nutrition into your busy daily  life.",
+                    title: "6-Month Program",
+                    description: " Deep, Sustainable Change with a 6-Month Nutrition Program.",
                     link: "/six",
                     linkText: "Learn More",
                     image: "/f.jpg?height=400&width=600",
@@ -275,8 +275,8 @@ export default function Home() {
                     delay: 0.4,
                   },
                   {
-                    title: "Expertise Gut Health",
-                    description: "Personalized nutrition plans to support your gut health.",
+                    title: "12-Month Program",
+                    description: "Long-Term Lifestyle Rebuild with a 12-Month Nutrition Program.",
                     link: "/twelve",
                     linkText: "Learn more",
                     image: "/gut.jpg?height=400&width=600",
@@ -467,7 +467,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-medium" style={{ color: "#bfa14a" }}>About</h3>
               <p className="text-amber-100 mb-4 text-xl">
-                Ekta Singh Nutrition is dedicated to helping you find peace with food and your body through intuitive
+                Thrivin Nutrition is dedicated to helping you find peace with food and your body through intuitive
                 eating and a non-diet approach.
               </p>
               <div className="flex space-x-3">

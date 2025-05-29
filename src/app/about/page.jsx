@@ -81,54 +81,7 @@ const page = () => {
               </AnimatedSection>
 
               
-              <AnimatedSection className="mb-16">
-                <TextReveal delay={0.2}>
-                  <h2 className="text-gradient-gold-amber text-3xl font-light mb-8">
-                    <ScrambleText text="Certificates and Acheivements" duration={1500} />
-                  </h2>
-                </TextReveal>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {[
-                    {
-                      title: "Fitness First Certification",
-                      issuer: "ACE Approved",
-                      year: "2016",
-                      image: "/c1.jpg",
-                      description:
-                        "Advanced certification of wining strength category in Fitness First",
-                    },
-                    {
-                      title: "Fitness First Certification",
-                      issuer: "Zumba Fitness",
-                      year: "2013",
-                      image: "/c2.jpg",
-                      description: "First prize at Bosuball Challenge ",
-                    },
-                    
-                  ].map((cert, index) => (
-                    <TextReveal key={index} delay={0.3 + index * 0.1}>
-                      <div className="bg-black-900 border border-gold-500/20 p-6 rounded-lg shadow-inner hover:border-gold-500/40 transition-all duration-300 group">
-                        <div className="relative overflow-hidden rounded-lg mb-4">
-                          <Image
-                            src={cert.image || "/placeholder.svg"}
-                            alt={cert.title}
-                            width={200}
-                            height={200}
-                            className="w-full h-90 object-fit transform group-hover:scale-105 transition-transform duration-500"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-gold-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </div>
-                        <h3 className="text-gold-500 font-medium mb-2 group-hover:text-amber-400 transition-colors duration-300">
-                          {cert.title}
-                        </h3>
-                       
-                        <p className="text-amber-500 text-sm mb-3">{cert.year}</p>
-                        <p className="text-amber-100 text-sm leading-relaxed">{cert.description}</p>
-                      </div>
-                    </TextReveal>
-                  ))}
-                </div>
-              </AnimatedSection>
+              
 
               <AnimatedSection className="mb-16">
                 <TextReveal delay={0.2}>
@@ -244,7 +197,7 @@ const page = () => {
             <div>
               <h3 className="text-xl font-medium" style={{ color: "#bfa14a" }}>About</h3>
               <p className="text-amber-100 mb-4 text-xl">
-                Ekta Singh Nutrition is dedicated to helping you find peace with food and your body through intuitive
+                Thrivin Nutrition is dedicated to helping you find peace with food and your body through intuitive
                 eating and a non-diet approach.
               </p>
               <div className="flex space-x-3">

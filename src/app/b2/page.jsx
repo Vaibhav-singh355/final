@@ -225,7 +225,7 @@ const page = () => {
             <div>
               <h3 className="text-xl font-medium" style={{ color: "#bfa14a" }}>About</h3>
               <p className="text-amber-100 mb-4 text-xl">
-                Ekta Singh Nutrition is dedicated to helping you find peace with food and your body through intuitive
+                Thrivin Nutrition is dedicated to helping you find peace with food and your body through intuitive
                 eating and a non-diet approach.
               </p>
               <div className="flex space-x-3">

@@ -1,110 +1,35 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Check, ArrowLeft } from "lucide-react"
+import { ArrowRight, Check, ArrowLeft,Facebook,Instagram } from "lucide-react"
 import {  useState, useEffect, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
 export default function AthleticPerformancePlanPage() {
   const planDetails = {
-    title: "Athletic Performance Nutrition",
-    duration: "10 weeks",
+    title: "Deep, Sustainable Change",
+    duration: "6-Months Program",
     price: "₹18,000",
     description:
-      "A specialized nutrition program designed to optimize athletic performance, enhance recovery, and support your training goals through strategic fueling, nutrient timing, and personalized supplementation.",
+      "This program is designed for those who want to go beyond short-term results and truly transform their health from the inside out. Over six months, we focus on long-term habit formation, hormonal balance, metabolism optimization, and sustainable fat loss or muscle gain. Your plan evolves with you through every phase—whether you’re hitting a plateau, traveling, or shifting routines. Regular check-ins, performance-based tweaks, and tailored guidance help you stay consistent while making meaningful lifestyle upgrades. Ideal for individuals with specific health concerns or those looking to create a lasting shift.",
     image: "/images/services/athletic-performance.jpg",
     color: "gold",
     popular: false,
     features: [
-      "Comprehensive performance nutrition assessment",
-      "Personalized meal plans aligned with training cycles",
-      "Pre/post-workout nutrition protocols",
-      "Strategic nutrient timing for optimal performance",
-      "Body composition analysis and monitoring",
-      "Sport-specific supplementation recommendations",
-      "Hydration strategies for training and competition",
+      " focus on long-term habit formation, hormonal balance, metabolism optimization, and sustainable fat loss or muscle gain. ",
+      "Regular check-ins, performance-based tweaks.",
+      "Tailored guidance helps you stay consistent while making meaningful lifestyle upgrades.",
+      
+      "Your plan evolves with you through every phase—whether you’re hitting a plateau, traveling, or shifting routines",
+      "Ideal for individuals with specific health concerns or those looking to create a lasting shift.",
       "Recovery nutrition protocols",
     ],
-    includes: [
-      {
-        title: "Initial Performance Assessment",
-        description:
-          "90-minute comprehensive evaluation of your training regimen, nutrition habits, and performance goals to create your personalized plan.",
-      },
-      {
-        title: "Weekly Follow-ups",
-        description:
-          "30-minute weekly sessions to track progress, adjust nutrition based on training phases, and optimize performance.",
-      },
-      {
-        title: "Training-Synchronized Nutrition Plans",
-        description:
-          "Custom nutrition plans that align with your training cycles, including different protocols for heavy training days, recovery days, and competition.",
-      },
-      {
-        title: "Performance Supplement Protocol",
-        description:
-          "Evidence-based supplement recommendations to enhance performance, recovery, and adaptation to training.",
-      },
-      {
-        title: "Recipe Collection",
-        description:
-          "Over 50 athlete-focused recipes designed to fuel performance while being practical for busy training schedules.",
-      },
-      {
-        title: "Body Composition Tracking",
-        description:
-          "Regular assessments to monitor changes in body composition and ensure nutrition supports your performance goals.",
-      },
-    ],
-    idealFor: [
-      "Competitive athletes looking to optimize performance",
-      "Recreational athletes training for specific events",
-      "Fitness enthusiasts wanting to improve body composition",
-      "CrossFit, strength training, and endurance athletes",
-      "Team sport players seeking a competitive edge",
-      "Anyone looking to enhance recovery between training sessions",
-    ],
-    testimonials: [
-      {
-        quote:
-          "Ekta's Athletic Performance plan helped me shave 15 minutes off my marathon time. The nutrition timing strategies made a huge difference in my energy levels during long runs.",
-        name: "Vikram S.",
-        location: "Pune",
-        image: "/images/testimonials/client-1.jpg",
-      },
-      {
-        quote:
-          "As a competitive CrossFit athlete, I needed nutrition that could keep up with my training. This program helped me recover faster and perform better in competitions.",
-        name: "Arjun M.",
-        location: "Hyderabad",
-        image: "/images/testimonials/client-2.jpg",
-      },
-    ],
-    faqs: [
-      {
-        question: "Will this plan help me lose weight while maintaining performance?",
-        answer:
-          "Yes, if that's your goal. The plan can be designed to create a slight caloric deficit while ensuring you have adequate energy for training and recovery, leading to fat loss while maintaining or even improving performance.",
-      },
-      {
-        question: "Do I need to track macros or calories on this program?",
-        answer:
-          "Some level of tracking is recommended initially to ensure you're meeting your performance nutrition needs, but we focus on developing intuitive eating skills that work within your athletic context for long-term sustainability.",
-      },
-      {
-        question: "How quickly will I notice performance improvements?",
-        answer:
-          "Many athletes report improved energy levels and recovery within 1-2 weeks. More significant performance gains typically emerge within 3-6 weeks as your body adapts to the optimized nutrition approach.",
-      },
-      {
-        question: "Can this plan accommodate plant-based athletes?",
-        answer:
-          "The program can be fully customized for vegetarian, vegan, or plant-based athletes, ensuring all performance nutrition needs are met through appropriate food choices and supplementation if needed.",
-      },
-    ],
   }
-
+  const cont = () => {
+    window.scrollTo({
+      top: document.getElementById("contact").offsetTop,
+      behavior: "smooth",
+    })}
   return (
     <div className="flex min-h-screen flex-col overflow-hidden bg-black-950 text-amber-50">
       <BackgroundDecoration />
@@ -115,7 +40,7 @@ export default function AthleticPerformancePlanPage() {
             <div className="max-w-5xl mx-auto">
               <TextReveal delay={0.1}>
                 <Link
-                  href="/nutrition-plans"
+                  href="/"
                   className="inline-flex items-center text-amber-400 hover:text-amber-300 mb-8 group"
                 >
                   <ArrowLeft className="mr-2 h-4 w-4 transform translate-x-0 group-hover:-translate-x-1 transition-transform duration-300" />
@@ -132,21 +57,22 @@ export default function AthleticPerformancePlanPage() {
                   </TextReveal>
                   <TextReveal delay={0.2}>
                     <div className="flex items-center mb-6">
-                      <span className="text-amber-300 mr-4">{planDetails.duration}</span>
-                      <span className="text-gold-500 text-3xl font-bold">{planDetails.price}</span>
+                      <span className="text-amber-300 mr-4 text-xl">{planDetails.duration}</span>
+                      
                     </div>
                   </TextReveal>
                   <TextReveal delay={0.3} className="text-amber-100 mb-8 text-lg leading-relaxed">
                     {planDetails.description}
                   </TextReveal>
                   <TextReveal delay={0.4}>
-                    <Link
-                      href="/contact?plan=athletic-performance"
+                     <button
+                      onClick={cont}
+                      
                       className="inline-flex items-center px-8 py-4 bg-gold-500 text-black-950 hover:bg-gold-600 transition-all duration-300 rounded-full group font-medium text-lg"
                     >
                       <span className="group-hover:tracking-wider transition-all duration-300">Book This Plan</span>
                       <ArrowRight className="ml-2 h-5 w-5 transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
+                    </button>
                   </TextReveal>
                 </div>
                 <TextReveal delay={0.3}>
@@ -163,24 +89,7 @@ export default function AthleticPerformancePlanPage() {
                 </TextReveal>
               </div>
 
-              <AnimatedSection className="mb-16">
-                <TextReveal delay={0.2}>
-                  <h2 className="text-gradient-gold-amber text-3xl font-light mb-8">
-                    <ScrambleText text="What's Included" duration={1500} />
-                  </h2>
-                </TextReveal>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {planDetails.includes.map((item, index) => (
-                    <TextReveal key={index} delay={0.3 + index * 0.1}>
-                      <div className="bg-black-900 border border-gold-500/20 p-6 rounded-lg shadow-inner hover:border-gold-500/40 transition-all duration-300 h-full">
-                        <h3 className="text-gold-500 text-xl font-medium mb-3">{item.title}</h3>
-                        <p className="text-amber-100">{item.description}</p>
-                      </div>
-                    </TextReveal>
-                  ))}
-                </div>
-              </AnimatedSection>
-
+              
               <AnimatedSection className="mb-16">
                 <TextReveal delay={0.2}>
                   <h2 className="text-gradient-amber-gold text-3xl font-light mb-8">
@@ -201,132 +110,139 @@ export default function AthleticPerformancePlanPage() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection className="mb-16">
-                <TextReveal delay={0.2}>
-                  <h2 className="text-gradient-gold-amber text-3xl font-light mb-8">
-                    <ScrambleText text="Ideal For" duration={1500} />
-                  </h2>
-                </TextReveal>
-                <div className="bg-black-900 border border-gold-500/20 p-8 rounded-lg shadow-inner">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {planDetails.idealFor.map((item, index) => (
-                      <TextReveal key={index} delay={0.3 + index * 0.05}>
-                        <div className="flex items-start">
-                          <span className="text-gold-500 mr-3">•</span>
-                          <span className="text-amber-100">{item}</span>
-                        </div>
-                      </TextReveal>
-                    ))}
-                  </div>
-                </div>
-              </AnimatedSection>
+            
 
-              <AnimatedSection className="mb-16">
-                <TextReveal delay={0.2}>
-                  <h2 className="text-gradient-amber-gold text-3xl font-light mb-8">
-                    <ScrambleText text="Client Success Stories" duration={1500} />
-                  </h2>
-                </TextReveal>
-                <div className="grid md:grid-cols-2 gap-8">
-                  {planDetails.testimonials.map((testimonial, index) => (
-                    <TextReveal key={index} delay={0.3 + index * 0.1}>
-                      <div className="bg-black-900 border border-gold-500/20 p-6 rounded-lg shadow-inner hover:border-gold-500/40 transition-all duration-300">
-                        <div className="flex items-start mb-4">
-                          <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-gold-500/30 mr-4 flex-shrink-0">
-                            <Image
-                              src={testimonial.image || "/placeholder.svg?height=100&width=100"}
-                              alt={testimonial.name}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                          <div>
-                            <h3 className="text-gold-500 font-medium">{testimonial.name}</h3>
-                            <p className="text-amber-300 text-sm">{testimonial.location}</p>
-                          </div>
-                        </div>
-                        <p className="text-amber-100 italic">"{testimonial.quote}"</p>
-                      </div>
-                    </TextReveal>
-                  ))}
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection className="mb-16">
-                <TextReveal delay={0.2}>
-                  <h2 className="text-gradient-gold-amber text-3xl font-light mb-8">
-                    <ScrambleText text="Frequently Asked Questions" duration={1500} />
-                  </h2>
-                </TextReveal>
-                <div className="space-y-6">
-                  {planDetails.faqs.map((faq, index) => (
-                    <TextReveal key={index} delay={0.3 + index * 0.1}>
-                      <div className="bg-black-900 border border-gold-500/20 p-6 rounded-lg shadow-inner hover:border-gold-500/40 transition-all duration-300">
-                        <h3 className="text-gold-500 text-lg font-medium mb-3">{faq.question}</h3>
-                        <p className="text-amber-100">{faq.answer}</p>
-                      </div>
-                    </TextReveal>
-                  ))}
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection className="bg-black-900 border border-gold-500/20 p-8 md:p-12 rounded-lg shadow-inner mb-16">
-                <div className="text-center">
-                  <TextReveal delay={0.2}>
-                    <h2 className="text-gradient-gold-amber text-3xl font-light mb-4">
-                      <ScrambleText text="Ready to Elevate Your Athletic Performance?" duration={1500} />
-                    </h2>
-                  </TextReveal>
-                  <TextReveal delay={0.3} className="text-amber-100 mb-8 max-w-3xl mx-auto">
-                    Take your training and performance to the next level with nutrition strategies designed specifically
-                    for athletes. Book your spot in the Athletic Performance Nutrition program today.
-                  </TextReveal>
-                  <TextReveal delay={0.4}>
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
-                      <Link
-                        href="/contact?plan=athletic-performance"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-black-950 hover:bg-gold-600 transition-all duration-300 rounded-full group font-medium"
-                      >
-                        <span className="group-hover:tracking-wider transition-all duration-300">Book This Plan</span>
-                        <ArrowRight className="ml-2 h-5 w-5 transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300" />
-                      </Link>
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center justify-center px-8 py-4 border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-black-950 transition-all duration-300 rounded-full group font-medium"
-                      >
-                        <span className="group-hover:tracking-wider transition-all duration-300">
-                          Schedule Free Consultation
-                        </span>
-                      </Link>
-                    </div>
-                  </TextReveal>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection>
-                <TextReveal delay={0.2}>
-                  <div className="flex justify-between items-center">
-                    <Link
-                      href="/nutrition-plans/womens-health"
-                      className="inline-flex items-center text-amber-400 hover:text-amber-300 group"
-                    >
-                      <ArrowLeft className="mr-2 h-4 w-4 transform translate-x-0 group-hover:-translate-x-1 transition-transform duration-300" />
-                      <span>Women's Hormonal Balance Plan</span>
-                    </Link>
-                    <Link
-                      href="/nutrition-plans/weight-management"
-                      className="inline-flex items-center text-amber-400 hover:text-amber-300 group"
-                    >
-                      <span>Sustainable Weight Management</span>
-                      <ArrowRight className="ml-2 h-4 w-4 transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
-                  </div>
-                </TextReveal>
-              </AnimatedSection>
+              
             </div>
           </div>
         </section>
       </main>
+      <section id="contact" className="relative">
+                <AnimatedSection className="py-20 bg-gradient-to-b from-black-950 via-black-900 to-black-950 relative">
+                  <div className="container mx-auto px-4" >
+                    <TextReveal>
+                      <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#968045] via-[#bfa14a] to-[#7a6938] mb-12 text-center">
+                        Contact Us
+                      </h2>
+                      <div className="max-w-2xl mx-auto text-center mb-8">
+                        <p className="text-amber-100 mb-4 text-lg">
+                          Have questions or want to learn more about our services? We&apos;re here to help!
+                        </p>
+                        <p className="text-amber-100 mb-6 text-lg">
+                          Reach out to us via email or follow us on social media for the latest updates and tips.
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <a
+          href={`https://wa.me/9810307409?text=hello`}
+          target="_blank"
+          className="whatsapp-link relative"
+          rel="noreferrer noopener"
+          style={{ width: "100%" }}
+        >
+          <button className="w-full sm:w-auto bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
+            <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
+              Chat on WhatsApp
+            </span>
+            <span>
+              <Image src="/WhatsApp.svg.png" width={26} height={26} alt="wp" />
+            </span>
+          </button>
+        </a>
+        <a href="tel:+919810307409" style={{ width: "100%" }}>
+          <button className="w-full sm:w-auto bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 flex items-center rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group justify-center">
+            <span className="mr-2 group-hover:tracking-wider transition-all text-black duration-300">
+              Call Us
+            </span>
+            <span>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </button>
+        </a>
+      </div>
+      
+      
+      
+                      </div>
+                    </TextReveal>
+      
+      
+                  </div>
+                  <ColorfulDivider position="bottom" />
+                </AnimatedSection>
+              </section>
+            
+      
+            <footer className="bg-black-900 py-16 relative z-10 border-t border-[#bfa14a]/20">
+              <div className="container mx-auto px-4">
+                <div className="grid md:grid-cols-3 gap-44">
+                  <div>
+                    <h3 className="text-xl font-medium" style={{ color: "#bfa14a" }}>About</h3>
+                    <p className="text-amber-100 mb-4 text-xl">
+                      Thrivin Nutrition is dedicated to helping you find peace with food and your body through intuitive
+                      eating and a non-diet approach.
+                    </p>
+                    <div className="flex space-x-3">
+                      <Link href="#" aria-label="Facebook" className="social-icon-link">
+                        <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                      </Link>
+                      <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
+                        <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                      </Link>
+                      
+                    </div>
+                  </div>
+      
+                  <div>
+                    <h3 className="text-lg font-medium" style={{ color: "#7a6938" }}>Popular Posts</h3>
+                    <ul className="space-y-4">
+                      {[
+                        { title: "Nutrition and Gut health", href: "/b1", color: "#bfa14a", image: "/gut.png?height=100&width=100" },
+                        { title: "Women's Health", href: "/b2", color: "#968045", image: "/w.jpg?height=100&width=100" },
+                        { title: "Fitness and Health", href: "/b3", color: "#bfa14a", image: "/fit.jpg?height=100&width=100" },
+                      ].map((post, index) => (
+                        <li key={index}>
+                          <Link
+                            href={post.href}
+                            className="transition-colors duration-300 flex items-start group"
+                            style={{ color: post.color }}
+                          >
+                            <div className="w-16 h-16 relative flex-shrink-0 mr-3 overflow-hidden rounded-md border border-[#bfa14a]/20">
+                              <Image
+                                src={post.image || "/placeholder.svg"}
+                                alt="Blog post thumbnail"
+                                fill
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                              />
+                              <div
+                                className="absolute inset-0 bg-gradient-to-br from-[#bfa14a]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                              ></div>
+                            </div>
+                            <span className="transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300 group-hover:tracking-wider">
+                              {post.title}
+                            </span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gradient-gold mb-4">Contact</h3>
+                    <p className="text-amber-100 mb-2 font-bold text-lg">Email: ekta@thrivin.in</p>
+                    <p className="text-amber-100 mb-2 font-bold text-lg flex items-center justify-start">
+                               <span><Image src="/call.webp" width={30} height={30}   alt='wp'/>
+      </span>    <span className="ml-3">+91 9810307409</span>          
+                            </p>
+                    
+                  </div>
+      
+                </div>
+                <div className="mt-12 pt-8 border-t border-[#bfa14a]/20 text-center">
+                  <p className="animate-gold-shine text-lg font-bold" style={{ color: "#bfa14a" }}>
+                    &copy; {new Date().getFullYear()} Thrivin Nutrition. All Rights Reserved.
+                  </p>
+                </div>
+              </div>
+            </footer>
     </div>
   )
 }
