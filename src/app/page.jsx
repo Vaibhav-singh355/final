@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* Home Section */}
       <main className="flex-1 relative z-10">
-        <section className="relative h-[70vh] md:h-[85vh] w-full overflow-hidden opacity-90" id="home">
+        <section className="relative h-[40vh] md:h-[85vh] w-full overflow-hidden opacity-90" id="home">
           <div className="absolute inset-0 bg-gradient-to-r from-black-900/80 via-black-950/70 to-black-900/80 z-0"></div>
           <Image
             src="/ektabg.jpg?height=1200&width=2000"
