@@ -182,13 +182,9 @@ export default function AthleticPerformancePlanPage() {
                       eating and a non-diet approach.
                     </p>
                     <div className="flex space-x-3">
-                      <Link href="#" aria-label="Facebook" className="social-icon-link">
-                        <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                      </Link>
-                      <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
-                        <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                      </Link>
-                      
+                     <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
+                  <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
+                </Link> 
                     </div>
                   </div>
       

@@ -172,21 +172,21 @@ export default function Home() {
             src="/ektabg.jpg?height=1200&width=2000"
             alt="Kara Lydon in kitchen"
             fill
-            className="object-fill transform scale-105 animate-slow-zoom opacity-80"
+            className=" object-fill py-10   scale-105 animate-slow-zoom opacity-80"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black-950/90"></div>
           <div className="absolute bottom-12 left-4 md:bottom-32 md:left-32 w-full z-10 px-2 md:px-0">
             <div className="overflow-hidden mb-2">
               <AnimatedHeading
-                text="A Healthy outside"
+                text="Balanced Living "
                 className="bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-wide font-serif leading-tight drop-shadow-sm"
                 initialDelay={0.3}
               />
             </div>
             <div className="overflow-hidden">
               <AnimatedHeading
-                text=" starts from the inside"
+                text="Through Personalized Nutrition.."
                 className="bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-extrabold tracking-wide leading-tight drop-shadow-sm block"
                 delay={1000}
                 duration={2000}
@@ -318,6 +318,103 @@ export default function Home() {
             <ColorfulDivider position="bottom" />
           </AnimatedSection>
         </section>
+         <section id="instagram" className="relative">
+          <AnimatedSection className="py-20 bg-black-950 relative">
+            <div className="container mx-auto px-4">
+              <TextReveal>
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#968045] via-[#bfa14a] to-[#7a6938] mb-4 text-center">
+                  Follow Our Journey
+                </h2>
+                <p className="text-amber-100 text-center mb-12 text-lg">
+                  Get daily nutrition tips, healthy recipes, and wellness inspiration on Instagram
+                </p>
+              </TextReveal>
+
+             
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+  {[
+    {
+      id: 1,
+      image: "/i1.jpg",
+      caption: "Eat Well. Live Fully. Thrive Holistically. 🥣✨",
+      link:"https://www.instagram.com/p/DKLqUBlyowf/"
+    },
+    {
+      id: 2,
+      image: "/i2.jpg",
+      caption: "Animal protein and Plant protein 🌈🥗",
+      link:"https://www.instagram.com/p/DIsSgo7SvUx/?img_index=1"
+    },
+    {
+      id: 3,
+      image: "/i3.jpg",
+      caption: "Transform from the Inside Out.",
+      link:"https://www.instagram.com/p/DHbMHb0yfeh/"
+    },
+    {
+      id: 4,
+      image: "/i4.jpg",
+      caption: "10 Fitness Hacks 💪⚡",
+      link:"https://www.instagram.com/p/DH45A_Tyvya/"
+    },
+    
+  ].map((post) => (
+    <TextReveal key={post.id} delay={post.delay}>
+      <Link href={post.link} >
+      <div className="group bg-black-900 rounded-xl overflow-hidden border border-[#bfa14a]/30 hover:border-[#bfa14a]/70 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col">
+        <div className="relative aspect-square w-full  h-[500] sm:h-72 md:h-90 lg:h-[600] overflow-hidden">
+          
+          <Image
+            src={post.image || "/placeholder.svg?height=300&width=400"}
+            alt={`Instagram post ${post.id}`}
+            fill
+            className="object-fit transition-transform duration-700 group-hover:scale-105"
+          />
+          
+          <div className="absolute inset-0 bg-gradient-to-t from-black-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+        <div className="flex-1 flex flex-col justify-between p-4">
+          <div>
+            <p className="text-xs text-amber-100 mb-2 line-clamp-2 min-h-[2.5em]">{post.caption}</p>
+          </div>
+          <div className="flex items-center justify-between mt-2">
+            
+          </div>
+        </div>
+      </div>
+      </Link>
+    </TextReveal>
+  ))}
+</div>
+
+              {/* Instagram CTA */}
+              <div className="text-center">
+                <TextReveal delay={0.7}>
+                  <div className="mb-6">
+                    <div className="inline-flex items-center space-x-3 mb-4">
+                      <Instagram className="h-8 w-8 text-[#bfa14a]" />
+                      <span className="text-[#bfa14a] font-medium text-lg">thrivinwithektaa</span>
+                    </div>
+                  </div>
+                  <Link
+                    href="https://www.instagram.com/thrivinwithektaa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center px-8 py-3 border-2 border-[#bfa14a] text-[#bfa14a] hover:bg-[#bfa14a] hover:text-black transition-all duration-300 rounded-full overflow-hidden relative"
+                  >
+                    <Instagram className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                    <span className="relative z-10 group-hover:tracking-wider hover:text-black bg-clip-text text-transparent bg-gradient-to-r from-[#bfa14a] via-[#968045] to-[#7a6938] transition-all duration-300">
+                      FOLLOW US ON INSTAGRAM
+                    </span>
+                    <span className="absolute inset-0 bg-[#bfa14a] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
+                  </Link>
+                </TextReveal>
+              </div>
+            </div>
+            <ColorfulDivider position="bottom" />
+          </AnimatedSection>
+        </section>
+       
         <section id="blog" className="relative">
           <AnimatedSection className="py-20 bg-black-950 relative">
             <div className="container mx-auto px-4">
@@ -471,9 +568,7 @@ export default function Home() {
                 eating and a non-diet approach.
               </p>
               <div className="flex space-x-3">
-                <Link href="#" aria-label="Facebook" className="social-icon-link">
-                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
+                
                 <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
                   <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>

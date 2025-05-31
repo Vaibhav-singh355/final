@@ -40,7 +40,7 @@ const page = () => {
 
               </div>
 
-              <AnimatedSection className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <AnimatedSection className="grid md:grid-cols-2 gap-12 items-start mb-16">
                 <div className="relative overflow-hidden rounded-lg shadow-xl border border-gold-500/20">
                   <Image
                     src="/abt.jpg?height=600&width=600"
@@ -201,13 +201,9 @@ const page = () => {
                 eating and a non-diet approach.
               </p>
               <div className="flex space-x-3">
-                <Link href="#" aria-label="Facebook" className="social-icon-link">
-                  <Facebook className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
-                </Link>
                 <Link href="https://www.instagram.com/thrivinwithektaa/" aria-label="Instagram" className="social-icon-link">
                   <Instagram className="h-8 w-8 text-[#bfa14a] hover:text-yellow-700 transition-all duration-300 hover:scale-125" />
                 </Link>
-                
               </div>
             </div>
 
