@@ -176,7 +176,7 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black-950/90"></div>
-          <div className="absolute bottom-12 left-4 md:bottom-32 md:left-32  md:w-1/2 w-[500] z-10 px-2 md:px-0">
+          <div className="absolute bottom-12 left-4 md:bottom-32 md:left-32  md:w-1/2 w-full z-10 px-2 md:px-0">
             <div className="overflow-hidden mb-2">
               <AnimatedHeading
                 text="Balanced Living "
