@@ -228,7 +228,7 @@ export default function Home() {
                   </TextReveal>
                 </h2>
                 <TextReveal className="text-amber-100 mb-8 leading-relaxed text-lg" delay={0.5}>
-                  Hi, I’m Ekta Singh—a passionate holistic dietitian and health expert dedicated to transforming lives through mindful nutrition and sustainable lifestyle choices. I empowers individuals to achieve optimal health by addressing physical activities,diets and habbits.Through my platform, Nurture Yourself, I offers personalized diet and daily hobbies inspiring people  to embrace clean eating and active living for lasting vitality.. My mission is to empower you with the knowledge and tools you need to take control of your health. 
+                  Hi, I’m Ekta Singh—a passionate holistic health coach and health expert dedicated to transforming lives through mindful nutrition and sustainable lifestyle choices. I empowers individuals to achieve optimal health by addressing physical activities,diets and habbits.Through my platform, Nurture Yourself, I offers personalized health guidance and daily hobbies inspiring people  to embrace clean eating and active living for lasting vitality.. My mission is to empower you with the knowledge and tools you need to take control of your health. 
                 </TextReveal>
                 <div className="flex justify-center">
                   <Link
