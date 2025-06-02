@@ -194,14 +194,18 @@ export default function Home() {
             </div>
             <div className="mt-6 md:mt-8 overflow-hidden">
               <div className="animate-slide-up" style={{ animationDelay: "0.9s" }}>
-                <button onClick={cont} className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
-                  <span className="mr-2 group-hover:tracking-wider transition-all text-lg md:text-2xl font-bold text-black duration-300">
-                    Start Your Journey
+                <a href="tel:+919810307409">
+                <button  className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
+                  <span><Image src="/call.webp" width={40} height={30}   alt='wp'/>
+</span>
+                  <span className="mr-2 ml-1 group-hover:tracking-wider transition-all text-lg md:text-2xl font-bold text-black duration-300">
+                                          Start Consultation
                   </span>
                   <span>
                     <ArrowRight className="ml-2 h-6 md:h-8 w-6 md:w-8 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </button>
+                </a>
               </div>
             </div>
           </div>
