@@ -27,14 +27,14 @@ const page = () => {
     <div className="flex min-h-screen flex-col overflow-hidden bg-black-950 text-amber-50">
       <BackgroundDecoration />
 
-      <header className="container mx-auto px-4 py-6 grid grid-cols-2 relative z-10">
+      <header className="container mx-auto px-4 md:px-6 py-4 md:py-2 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
         <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0 hidden md:block">
           <Link href="/">
             <Image
               src="/logo.png?height=100&width=260"
               alt="Kara Lydon Nutrition"
-              width={100}
-              height={40}
+              width={140}
+              height={70}
               className="object-cover rounded-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
               priority
             />

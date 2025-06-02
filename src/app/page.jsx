@@ -67,14 +67,14 @@ export default function Home() {
       <BackgroundDecoration />
 
       {/* Header */}
-      <header className="container mx-auto px-4 md:px-6 py-4 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
+      <header className="container mx-auto px-4 md:px-6 py-4 md:py-2 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
         <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0 hidden md:block">
           <Link href="/">
             <Image
               src="/logo.png?height=100&width=260"
               alt="Kara Lydon Nutrition"
-              width={100}
-              height={40}
+              width={140}
+              height={70}
               className="object-cover rounded-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
               priority
             />
@@ -196,12 +196,14 @@ export default function Home() {
               <div className="animate-slide-up" style={{ animationDelay: "0.9s" }}>
                 <a href="tel:+919810307409">
                 <button  className="bg-gradient-to-r from-[#bfa14a] to-[#968045] hover:from-[#968045] hover:to-[#7a6938] text-black-950 rounded-full px-6 md:px-8 py-4 md:py-6 text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-2px] group flex items-center justify-center">
-                   <span><Image src="/call.webp" width={30} height={20}   alt='wp'/>
+                  <span><Image src="/call.webp" width={30} height={30}   alt='wp'/>
 </span>
                   <span className="mr-2 ml-1  group-hover:tracking-wider transition-all text-lg md:text-2xl font-bold text-black duration-300">
-                                          Start Consultation
+                                          Discovery Call
                   </span>
-                 
+                  <span>
+                    <ArrowRight className="ml-1 h-6 md:h-8 w-6 md:w-8 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
                 </button>
                 </a>
               </div>

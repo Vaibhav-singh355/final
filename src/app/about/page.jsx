@@ -11,14 +11,14 @@ const page = () => {
     <div className="flex min-h-screen flex-col overflow-hidden bg-black-950 text-amber-50">
       <BackgroundDecoration />
 
-      <header className="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
-        <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0  md:block">
+      <header className="container mx-auto px-4 md:px-6 py-4 md:py-2 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 relative z-10">
+        <div className="w-20 md:w-64 transition-transform duration-300  flex-shrink-0 hidden md:block">
           <Link href="/">
             <Image
               src="/logo.png?height=100&width=260"
               alt="Kara Lydon Nutrition"
-              width={100}
-              height={40}
+              width={140}
+              height={70}
               className="object-cover rounded-full shadow-xl hover:shadow-2xl transition-shadow duration-300"
               priority
             />
@@ -161,11 +161,11 @@ const page = () => {
                 </TextReveal>
                 <ul className="space-y-4 text-amber-100">
                   {[
-                    { text: "Registered Dietitian Nutritionist (RDN)", color: "gold" },
-                    { text: "Licensed Dietitian Nutritionist (LDN)", color: "amber" },
-                    { text: "Certified Intuitive Eating Counselor", color: "gold" },
+                    { text: " ", color: "gold" },
+                    { text: " ", color: "amber" },
+                    { text: " ", color: "gold" },
                     
-                    { text: "Master of Science in Nutrition", color: "gold" },
+                    { text: " ", color: "gold" },
                   ].map((credential, index) => (
                     <TextReveal key={index} delay={0.3 + index * 0.1}>
                       <li className="flex items-start">
