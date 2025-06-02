@@ -326,7 +326,7 @@ My journey into fitness began at 29, when I walked into a gym for the first time
                   Follow Our Journey
                 </h2>
                 <p className="text-amber-100 text-center mb-12 text-lg">
-                  Get daily nutrition tips, healthy recipes, and wellness inspiration on Instagram
+                  Get daily health tips and wellness inspiration on Instagram
                 </p>
               </TextReveal>
 
