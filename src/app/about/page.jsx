@@ -91,9 +91,9 @@ const page = () => {
                 </TextReveal>
                 <div className="bg-black-900 border border-gold-500/20 p-8 rounded-lg shadow-inner">
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed font-bold" delay={0.3}>
-                    Gut microbiome plays a pivotal role in health and disease. At THRIVIN, I aim to cultivate a healthier individual by focusing on this Gut MICROBIOME
+                    Gut microbiome plays a pivotal role in health and disease. At THRIVIN, I aim to cultivate a healthier individual by focusing on this Gut MICROBIOME.
 
-                    MICROBIOME is the central point for preventing, treating and protecting against various health issues. With this approach I work very closely with individuals to :
+                    MICROBIOME is the central point for preventing, treating and protecting against various health issues. With this approach I work very closely with clients to :
 
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.4}>
@@ -121,7 +121,7 @@ const page = () => {
                   </TextReveal>
                   <TextReveal className="text-amber-100 mb-6 leading-relaxed" delay={0.5}>
                     5.	COLLABORATION :
-                    Collaborate with other health care professional;s such as doctors, gastroenterologists, dietitions to ensure comprehensive care for your digestive issues or gut related conditions
+                    Collaborate with other health care professionals such as doctors, gastroenterologists, dietitions to ensure comprehensive care for your digestive issues or gut related conditions
 
 
 
@@ -161,11 +161,15 @@ const page = () => {
                 </TextReveal>
                 <ul className="space-y-4 text-amber-100">
                   {[
-                    { text: " ", color: "gold" },
-                    { text: " ", color: "amber" },
-                    { text: " ", color: "gold" },
+                    { text: "ACE certified fitness nutrition specialist  ", color: "gold" },
+                    { text: "ACE certified lifestyle disorders nutrition specialist", color: "amber" },
+                    { text: "ACE certified sports nutrition specialist", color: "gold" },
                     
-                    { text: " ", color: "gold" },
+                    { text: "ACE certified Fitness Trainer", color: "gold" },
+                    { text: "STRONG by Zumba Trainer", color: "gold" },
+                    { text: "Bachelor of Science (Group Home Science )", color: "gold" },
+                    { text: "Health and Wellness Coach ", color: "gold" },
+                    { text: "Six sigma green belt ", color: "gold" },
                   ].map((credential, index) => (
                     <TextReveal key={index} delay={0.3 + index * 0.1}>
                       <li className="flex items-start">
