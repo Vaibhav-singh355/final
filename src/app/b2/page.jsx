@@ -16,7 +16,7 @@ const page = () => {
      Hormones play a central role in women’s health, influencing everything from menstrual cycles and fertility to mood, metabolism, and bone health. Key hormones such as estrogen, progesterone, and testosterone must stay in balance for the body to function optimally. Throughout a woman's life — from puberty and pregnancy to perimenopause and menopause — hormonal fluctuations can impact physical and emotional well-being. Factors like nutrition, stress, sleep, and physical activity greatly affect hormonal balance. A healthy lifestyle, rich in whole foods, regular exercise, stress management, and adequate rest, can help support hormone health and reduce the risk of issues like menstrual irregularities, polycystic ovary syndrome (PCOS), and menopausal symptoms.  `,
   date: "May 15, 2023",
   readTime: "8 min read",
-  author: "Kara Lydon",
+  author: "Ekta Singh",
   category: "Mindful Eating",
   image: "/w.jpg?height=600&width=1200&text=Mindful+Eating+Hero",
   tags: ["mindfulness", "eating habits", "wellness", "nutrition", "self-care"],
