@@ -12,7 +12,7 @@ export default function AthleticPerformancePlanPage() {
     price: "₹18,000",
     description:
       "Perfect for those ready to take their first step toward a healthier lifestyle, this 12-week plan helps build strong foundations for fat loss, energy improvement, better gut health, and sustainable habits. Over the course of three months, you’ll receive a fully personalized nutrition plan designed around your routine, preferences, and fitness level. Weekly or biweekly check-ins ensure steady progress, while expert guidance supports mindful eating, improved recovery, and better food relationships. This is ideal for those seeking structure, accountability, and real results without overwhelm.",
-    image: "/images/services/athletic-performance.jpg",
+    image: "/p1.webp",
     color: "gold",
     popular: false,
     features: [
@@ -79,7 +79,7 @@ export default function AthleticPerformancePlanPage() {
                 <TextReveal delay={0.3}>
                   <div className="relative rounded-lg overflow-hidden shadow-2xl border-2 border-gold-500/30">
                     <Image
-                      src={planDetails.image || "/placeholder.svg?height=600&width=800"}
+                      src={planDetails.image || "/p1.jpg?height=600&width=800"}
                       alt={planDetails.title}
                       width={800}
                       height={600}

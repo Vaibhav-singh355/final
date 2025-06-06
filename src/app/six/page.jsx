@@ -12,7 +12,7 @@ export default function AthleticPerformancePlanPage() {
     price: "₹18,000",
     description:
       "This program is designed for those who want to go beyond short-term results and truly transform their health from the inside out. Over six months, we focus on long-term habit formation, hormonal balance, metabolism optimization, and sustainable fat loss or muscle gain. Your plan evolves with you through every phase—whether you’re hitting a plateau, traveling, or shifting routines. Regular check-ins, performance-based tweaks, and tailored guidance help you stay consistent while making meaningful lifestyle upgrades. Ideal for individuals with specific health concerns or those looking to create a lasting shift.",
-    image: "/images/services/athletic-performance.jpg",
+    image: "/p2.jpg",
     color: "gold",
     popular: false,
     features: [

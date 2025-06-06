@@ -12,7 +12,7 @@ export default function AthleticPerformancePlanPage() {
     price: "₹18,000",
     description:
       "For those committed to lasting change, this one-year plan offers the highest level of personalization, depth, and accountability. We focus on mastering habits, healing imbalances, and building a lifestyle that supports vitality, longevity, and strength—both physical and emotional. This is not just about weight loss or fitness; it’s about building a resilient body and mindset through every season of life. With flexible adjustments, detailed progress tracking, seasonal recalibration of plans, and full access to support, this program is ideal for anyone ready to reset and rewrite their health story for good.",
-    image: "/images/services/athletic-performance.jpg",
+    image: "/p3.webp",
     color: "gold",
     popular: false,
     features: [
