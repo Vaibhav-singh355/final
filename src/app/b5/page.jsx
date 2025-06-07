@@ -13,7 +13,7 @@ const page = () => {
   title: "Sustainable Fat Loss and Lifestyle",
   excerpt: " The Truth About Fat Loss After 40: Why It's Not Just About Calories.",
   content: `
-    Fat loss is most effectively achieved and sustained through long-term lifestyle changes rather than quick fixes or extreme diets. A balanced approach that includes nutritious eating, regular physical activity, quality sleep, and stress management plays a crucial role in supporting a healthy metabolism and promoting sustainable fat loss. Prioritizing whole, unprocessed foods, staying hydrated, and avoiding excessive sugar and refined carbs can help regulate hunger and energy levels. Consistency, rather than perfection, is key — making gradual, realistic changes to daily habits creates a foundation for lasting results. Ultimately, fat loss is not just about appearance, but about building a healthier, more energized life.  `,
+   `,
   date: "May 15, 2023",
   readTime: "8 min read",
   author: "Ekta Singh",

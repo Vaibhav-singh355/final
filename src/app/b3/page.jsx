@@ -13,7 +13,7 @@ const page = () => {
   title: "Fitness and Health",
   excerpt: "Strong Over Skinny: Why Muscle Mass Matters More Than You Think.",
   content: `
-     Fitness is a key component of overall health, contributing to physical strength, mental well-being, and disease prevention. Regular physical activity helps maintain a healthy weight, strengthens the heart and muscles, improves flexibility and balance, and boosts energy levels. It also supports mental health by reducing stress, anxiety, and depression through the release of mood-enhancing endorphins. Combined with a balanced diet, adequate sleep, and healthy lifestyle choices, consistent exercise promotes long-term wellness and reduces the risk of chronic conditions such as heart disease, diabetes, and obesity. Embracing fitness as a daily habit can significantly enhance both the quality and longevity of life. `,
+    `,
   date: "May 15, 2023",
   readTime: "8 min read",
   author: "Ekta Singh",

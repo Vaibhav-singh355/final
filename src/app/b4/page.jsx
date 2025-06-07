@@ -13,7 +13,7 @@ const page = () => {
   title: " Mind-Body Connection",
   excerpt: "Cravings, Cortisol & Comfort Food: Understanding Emotional Eating.",
   content: `
-    The mind and body are deeply interconnected, with each influencing the other in powerful ways. Thoughts, emotions, and mental states can have a direct impact on physical health, while the condition of the body can affect mood, focus, and overall mental well-being. Stress, for example, can lead to physical symptoms like headaches, fatigue, or digestive issues, while regular physical activity and practices like meditation or deep breathing can calm the mind and reduce anxiety. Nurturing both mental and physical health through mindfulness, movement, proper nutrition, and rest creates a balanced state where the mind and body work together for optimal health and resilience. `,
+    `,
   date: "May 15, 2023",
   readTime: "8 min read",
   author: "Ekta Singh",

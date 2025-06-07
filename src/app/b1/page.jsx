@@ -13,7 +13,7 @@ const page = () => {
   title: "Nutrition and Gut Health",
   excerpt: " Heal Your Gut, Heal Your Life: A Beginner's Guide to Better Digestion.",
   content: `
-     Nutrition plays a vital role in maintaining a healthy gut, which is essential for overall well-being. The gut is home to trillions of microorganisms, collectively known as the gut microbiome, which influence digestion, immunity, mental health, and even weight regulation. A diet rich in fiber, fermented foods, and plant-based diversity supports the growth of beneficial gut bacteria, promoting a balanced and resilient microbiome. In contrast, diets high in processed foods, sugar, and unhealthy fats can disrupt this balance, leading to inflammation and various health issues. By focusing on whole, nutrient-dense foods and maintaining a healthy lifestyle, individuals can significantly enhance their gut health and overall quality of life.  `,
+     `,
   date: "May 15, 2023",
   readTime: "8 min read",
   author: "Ekta Singh",

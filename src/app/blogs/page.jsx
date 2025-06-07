@@ -27,7 +27,7 @@ const page = () => {
   {
     id: 2,
     li:'/b2',
-    title: "Women&apos;s health and hormones",
+    title: "Women's health and hormones",
     excerpt:
       "More Muscle, Less Menopause Mess: Why Strength Training Is Your Best Ally.",
     content:
