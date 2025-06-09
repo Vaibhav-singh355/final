@@ -431,7 +431,7 @@ My journey into fitness began at 29, when I walked into a gym for the first time
                 {[
                   {
                     title: "Nutrition and Gut health ",
-                    date: "May 15, 2023",
+                    date: "May 15, 2025",
                     link: "/b1",
                     excerpt:
                       " Heal Your Gut, Heal Your Life: A Beginner&apos;s Guide to Better Digestion.",
@@ -441,7 +441,7 @@ My journey into fitness began at 29, when I walked into a gym for the first time
                   },
                   {
                     title: "Women's health and hormones ",
-                    date: "April 28, 2023",
+                    date: "May 20, 2025",
                     link: "/b2",
                     excerpt:
                       "Discover if you&apos;re ready to leave dieting behind and embrace a more peaceful relationship with food.",
@@ -451,7 +451,7 @@ My journey into fitness began at 29, when I walked into a gym for the first time
                   },
                   {
                     title: "Fitness and health ",
-                    date: "April 10, 2023",
+                    date: "May 1, 2025",
                     link: "/b3",
                     excerpt:
                       "Start your day with these satisfying, delicious breakfast recipes that will keep you energized.",

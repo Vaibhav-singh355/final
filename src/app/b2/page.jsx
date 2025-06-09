@@ -14,7 +14,7 @@ const page = () => {
   excerpt: " More Muscle, Less Menopause Mess: Why Strength Training Is Your Best Ally.",
   content: `
      `,
-  date: "May 15, 2023",
+  date: "May 20, 2025",
   readTime: "8 min read",
   author: "Ekta Singh",
   category: "Mindful Eating",

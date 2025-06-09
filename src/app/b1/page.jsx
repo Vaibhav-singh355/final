@@ -14,7 +14,7 @@ const page = () => {
   excerpt: " Heal Your Gut, Heal Your Life: A Beginner's Guide to Better Digestion.",
   content: `
      `,
-  date: "May 15, 2023",
+  date: "May 15, 2025",
   readTime: "8 min read",
   author: "Ekta Singh",
   category: "Mindful Eating",

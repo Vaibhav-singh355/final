@@ -14,7 +14,7 @@ const page = () => {
   excerpt: " The Truth About Fat Loss After 40: Why It's Not Just About Calories.",
   content: `
    `,
-  date: "May 15, 2023",
+  date: "April 15, 2025",
   readTime: "8 min read",
   author: "Ekta Singh",
   category: "Mindful Eating",

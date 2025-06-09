@@ -14,7 +14,7 @@ const page = () => {
   excerpt: "Cravings, Cortisol & Comfort Food: Understanding Emotional Eating.",
   content: `
     `,
-  date: "May 15, 2023",
+  date: "April 25, 2025",
   readTime: "8 min read",
   author: "Ekta Singh",
   category: "Mindful Eating",

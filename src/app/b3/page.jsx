@@ -14,7 +14,7 @@ const page = () => {
   excerpt: "Strong Over Skinny: Why Muscle Mass Matters More Than You Think.",
   content: `
     `,
-  date: "May 15, 2023",
+  date: "May 1, 2025",
   readTime: "8 min read",
   author: "Ekta Singh",
   category: "Mindful Eating",
